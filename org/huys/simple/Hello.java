@@ -26,7 +26,8 @@ class Hello
     public static void main(String[] args)
     {
         sayHello();
-        System.out.println(args[0]);
+        if (args.length > 0)
+            System.out.println(args[0]);
     }
 }
 
