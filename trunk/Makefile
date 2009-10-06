@@ -1,17 +1,12 @@
 #
 # Makefile for java
 #
+TOPDIR = .
 
-#
-JAVAC = javac
-JAVA  = java
-JAR   = jar
+include  $(TOPDIR)/make.inc
 
-RM = rm -vf
 
-OPTIONS = -verbose -d .
-
-JAVASRC = $(shell find . -name *.java -type f -print)
+JAVASRC = $(FINDSRC)
 CLASSES = ${JAVASRC:.java=.class}
 
 #
@@ -22,7 +17,7 @@ all : $(CLASSES)
 	$(JAVAC) $<
 
 ARCHIVE :
-	$(JAR) cvf hjava.jar org/
+	$(JAR) cvf hjava.jar $(FINDCLASS)
 
 dist :
 	@echo "Make dist..."
@@ -30,5 +25,5 @@ dist :
 
 .PHONY : clean
 clean :
-	find . -name *.class -type f -print0 | xargs -0 /bin/rm -vf
+	$(MAKECLEAN)
 
