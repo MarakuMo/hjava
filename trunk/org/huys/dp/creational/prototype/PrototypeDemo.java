@@ -71,7 +71,6 @@ class TheOther implements Prototype, Command {
     }
 }
 
-
 public class PrototypeDemo {
     // 3. Populate the "registry"
     public static void initializePrototypes() {
