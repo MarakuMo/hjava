@@ -27,3 +27,7 @@ echo Test org.huys.dp.behavioral.templatemethod
 java %JRE_FLAGS% org.huys.dp.behavioral.templatemethod.TemplateMethodDemo
 
 @pause
+
+echo Test org.huys.dp.behavioral.visitor
+
+java %JRE_FLAGS% org.huys.dp.behavioral.visitor.VisitorDemo
