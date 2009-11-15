@@ -1,4 +1,4 @@
-package org.huys.dp.structual.flyweight;
+package org.huys.dp.structural.flyweight;
 
 class Gazillion {
     private static int num = 0;
