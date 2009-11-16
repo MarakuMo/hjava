@@ -34,7 +34,7 @@ public class FactoryProto
     }
 
     static class Factory {
-        private static java.util.Map prototypes = new java.util.HashMap();
+        private static java.util.Map<String, Xyz> prototypes = new java.util.HashMap<String, Xyz>();
         static {
             prototypes.put( "tom",   new Tom() );
             prototypes.put( "dick",  new Dick() );
