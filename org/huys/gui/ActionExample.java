@@ -11,7 +11,7 @@ class QuittableFrame extends Frame {
 *  events to the original handler.
 */
     public boolean handleEvent(Event event) {
-        if (event.id == Event.WINDOW_DESTROY) 
+        if (event.id == Event.WINDOW_DESTROY)
             System.exit(0);
         return (super.handleEvent(event));
     }
@@ -29,7 +29,7 @@ class ResizeButton extends Button {
     public boolean action(Event event, Object object) {
         getParent().resize(width, height);
         getParent().layout();
-		System.out.println("Resize to " + width + "x" + height);
+        System.out.println("Resize to " + width + "x" + height);
         return(true);
     }
 }

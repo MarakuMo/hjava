@@ -116,7 +116,7 @@ class SomeClassWithDataAfter
 }
 
 class IntSet {
-    private Hashtable ht = new Hashtable();
+    private Hashtable<Integer, String> ht = new Hashtable<Integer, String>();
 
     // 1. Design an internal "iterator" class for the "collection" class
     public static class Iterator {
