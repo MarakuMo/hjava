@@ -1,30 +1,35 @@
 import javax.swing.JPanel;
-import java.lang.Thread.Runnable;
+import java.lang.Runnable;
 import java.lang.Thread;
+import java.awt.Dimension;
 import java.awt.Color;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseAdapter;
+import java.awt.event.KeyAdapter;
+import java.awt.event.KeyEvent;
+import java.lang.InterruptedException;
 
 public class GamePanel extends JPanel implements Runnable {
 
     private static final int PWIDTH = 500;
     private static final int PHEIGHT = 400;
-    
+
     private Thread animator;
     private volatile boolean running = false;
-    
+
     private volatile boolean gameover = false;
-    
+
     public GamePanel() {
         setBackground(Color.white);
         setPreferredSize(new Dimension(PWIDTH, PHEIGHT));
-        
+
         //
         setFocusable(true);
         requestFocus();    // JPanel now receives key events
         readyForTermination();
-        
+
         // listen for mouse presses
-        addMouseListener(
-            new MouseAdapter( ) {
+        addMouseListener( new MouseAdapter() {
                 public void mousePressed(MouseEvent e) {
                     testPress(e.getX(), e.getY());
                 }
@@ -37,7 +42,7 @@ public class GamePanel extends JPanel implements Runnable {
         super.addNotify();
         startGame();
     }
-    
+
     private void startGame() {
         if (animator == null || !running)
         {
@@ -45,40 +50,39 @@ public class GamePanel extends JPanel implements Runnable {
             animator.start();
         }
     }
-    
+
     public void stopGame() {
         running = false;
     }
-    
+
     public void run() {
         running = true;
-        
+
         while (running) {
             gameUpdate();
             gameRender();
             repaint();
-            
+
             try {
                 Thread.sleep(20);
-            } catch (InteruptedException ex) {
-            
+            } catch (InterruptedException ex) {
+
             }
         }
         System.exit(0);
     }
-    
+
     private void gameUpdate() {
-    
+
     }
-    
+
     private void gameRender() {
-    
+
     }
-    
+
     private void readyForTermination( )
     {
-        addKeyListener(
-            new KeyAdapter() {
+        addKeyListener( new KeyAdapter() {
                 // listen for esc, q, end, ctrl-c
                 public void keyPressed(KeyEvent e) {
                     int keyCode = e.getKeyCode();
@@ -92,7 +96,7 @@ public class GamePanel extends JPanel implements Runnable {
             }
         );
     }
-    
+
     private void testPress(int x, int y)
     {
         if (!gameover) {
