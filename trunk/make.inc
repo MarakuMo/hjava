@@ -24,7 +24,7 @@ JAR   = jar
 RM = rm -vf
 
 #
-OPTIONS = -verbose -d .
+OPTIONS = -verbose -Xlint:deprecation -d .
 
 
 
