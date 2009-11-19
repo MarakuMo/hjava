@@ -8,8 +8,8 @@ class QuittableFrame extends Frame {
     }
 
     /** Catch window destroy events. Pass all other
-*  events to the original handler.
-*/
+     *  events to the original handler.
+     */
     public boolean handleEvent(Event event) {
         if (event.id == Event.WINDOW_DESTROY)
             System.exit(0);
