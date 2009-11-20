@@ -1,6 +1,15 @@
+
+
 package org.huys.algo.gcd;
 
 public class Euclid {
+    /**
+     * The Euclid method of solving the GCD problem.
+     *
+     * @param   m   first positive integer
+     * @param   n   second postive integer
+     * @return      the greatest common denominator of m and n
+     */
     public static int solve(int m, int n) {
 
         if ( m <=0 || n <= 0 )
@@ -22,6 +31,13 @@ public class Euclid {
         return m;
     }
 
+    /**
+     * The Euclid method of solving the GCD problem.
+     *
+     * @param   m   first positive integer
+     * @param   n   second postive integer
+     * @return      the greatest common denominator of m and n
+     */
     public static int solve1(int m, int n)
     {
         if ( m <=0 || n <= 0 )

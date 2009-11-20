@@ -92,8 +92,7 @@ public class CrossRiver {
     
     public void move() {
         
-        if (count(leftSide)==1 && count(rightSide)==2  && isValid() &&
-!isLeftToRight )
+        if (count(leftSide)==1 && count(rightSide)==2  && isValid() && !isLeftToRight )
         {
             isLeftToRight = true;
             moveCount++;
