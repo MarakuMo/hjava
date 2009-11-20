@@ -1,3 +1,5 @@
+package org.huys.app.animation;
+
 import javax.swing.JPanel;
 import java.lang.Runnable;
 import java.lang.Thread;

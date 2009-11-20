@@ -21,7 +21,7 @@ import java.util.Date;
 
  * Copyright:    Copyright (c) 2002
  * Company: TurtleMeat
- * @author: Jon Berg <jon.berg[on_server]turtlemeat.com
+ * @author Jon Berg <jon.berg[on_server]turtlemeat.com
  * @version 1.0
  */
 //file: server.java

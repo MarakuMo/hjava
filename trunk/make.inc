@@ -36,6 +36,7 @@ ifeq ($(PLATFORM), win32)
     FINDSRC = $(shell wbin\find . \( -name *.java -not -name Hello3d.java \) -type f -print)
     FINDCLASS = $(shell wbin\find . -name *.class -type f -print)
     MAKECLEAN = wbin\find . \( -name *.class -o -name *.jar \) -type f -print0 -delete
+    MAKEDOC = javadoc -locale en_US -sourcepath org -d doc $(FINDSRC)
 else
     SHELL = /bin/bash
     WINE = LC_CTYPE="zh_CN.UTF-8" /opt/build/wine/bin/wine

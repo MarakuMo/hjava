@@ -23,6 +23,10 @@ dist :
 	@echo "Make dist..."
 	(cd .. &&  tar cjvf hjava.tgz hjava)
 
+.PHONY : doc
+doc :
+	$(MAKEDOC)
+
 .PHONY : clean
 clean :
 	$(MAKECLEAN)
