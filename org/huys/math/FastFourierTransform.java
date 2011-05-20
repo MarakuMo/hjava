@@ -1,6 +1,7 @@
 package org.huys.math;
 
-class FastFourierTransform
+public class FastFourierTransform
 {
+	
 }
 

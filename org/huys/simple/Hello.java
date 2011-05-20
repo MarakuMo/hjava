@@ -11,7 +11,7 @@ package org.huys.simple;
  * simply prints "Hello World!" to standard output.
  */
 
-class Hello
+public class Hello
 {
     public static void sayHello()
     {
