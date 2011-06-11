@@ -17,11 +17,11 @@ all : $(CLASSES)
 	$(JAVAC) $<
 
 ARCHIVE :
-	$(JAR) cvf hjava.jar $(FINDCLASS)
+	$(JAR) cvf hjava.jar $(FINDCLASS) log4j.properties
 
 dist :
 	@echo "Make dist..."
-	(cd .. &&  tar cjvf hjava.tgz hjava)
+	(cd .. &&  tar cjvf hjava.tgz src)
 
 .PHONY : doc
 doc :
@@ -30,4 +30,5 @@ doc :
 .PHONY : clean
 clean :
 	$(MAKECLEAN)
+	rm -vf hjava.jar
 

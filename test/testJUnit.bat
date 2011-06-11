@@ -12,4 +12,6 @@ echo Test org.huys.test
 
 java %JRE_FLAGS% org.junit.runner.JUnitCore org.huys.test.SubscriptionTest
 
+java %JRE_FLAGS% org.junit.runner.JUnitCore org.huys.test.SubscriptionTestCase
+
 @pause
