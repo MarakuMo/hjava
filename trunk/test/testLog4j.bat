@@ -6,7 +6,7 @@ REM
 REM
 
 REM
-set JRE_FLAGS=-classpath ../hjava.jar;../lib/junit.jar;../lib/log4j.jar -Djava.library.path=..;../lib
+set JRE_FLAGS=-classpath ../hjava.jar;../lib/junit.jar;../lib/log4j.jar -Djava.library.path=..
 
 echo Test org.huys.log
 

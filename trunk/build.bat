@@ -7,7 +7,7 @@ set PATH=D:\Progs\Java\jdk1.6.0_14\bin;%PATH%
 
 set PWD=%CD%
 
-set CLASSPATH=%CLASSPATH%;%PWD%/lib/junit.jar;%PWD%/lib/log4j.jar
+set CLASSPATH=%CLASSPATH%;%PWD%/lib/junit.jar;%PWD%/lib/log4j.jar;%PWD%/lib/spring.jar
 
 make
 
